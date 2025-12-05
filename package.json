@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist-electron/main.js",
   "scripts": {
-    "dev": "vite",
+    "dev:vue": "vite",
+    "dev:electron": "electron .",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "transpile:electron": "tsc -p src/electron/tsconfig.app.json"
   },
   "dependencies": {
     "vue": "^3.5.24"
